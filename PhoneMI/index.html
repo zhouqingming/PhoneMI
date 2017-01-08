@@ -1,0 +1,1316 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>小米手机客户端</title>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<link rel="stylesheet" type="text/css" href="index.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<style>
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+			
+			.oa-contact-cell.mui-table .mui-table-cell {
+				padding: 11px 0;
+				vertical-align: middle;
+			}
+			
+			.oa-contact-cell {
+				position: relative;
+				margin: -11px 0;
+			}
+			
+			.oa-contact-avatar {
+				width: 75px;
+			}
+			
+			.oa-contact-avatar img {
+				border-radius: 50%;
+			}
+			
+			.oa-contact-content {
+				width: 100%;
+			}
+			
+			.oa-contact-name {
+				margin-right: 20px;
+			}
+			
+			.oa-contact-name,
+			oa-contact-position {
+				float: left;
+			}
+			
+			.iconfont {
+				font-size: 24px;
+			}
+			
+			#divlogin {
+				background-color: #FF6B00;
+				height: 170px;
+			}
+			
+			.div_long {
+				height: 100px;
+				line-height: 100px;
+				text-align: center;
+				font-weight: bold;
+				color: #FFF;
+			}
+			
+			.div_long h2 {
+				height: 100px;
+				line-height: 100px;
+			}
+			
+			#divYuan {
+				height: 140px;
+				width: 140px;
+				margin: 0 auto;
+				border-radius: 70px;
+				background-color: #FFD24D;
+			}
+			.new_nav{
+				margin-top: 70px;
+				height: 150px;
+				background-color: #fff;
+			}
+			.div_font{
+				display: block;
+				height: 60px;
+				width: 60px;
+			}
+			.new_nav ul{
+				list-style: none;
+				width: 100%;
+				margin-left: -20px;
+			}
+			.new_nav li{
+				float: left;
+				width: 33%;
+				height: 130px;
+				text-align: center;
+				line-height: 130px;
+				border-right: 1px solid #ECECEC;
+			}
+			.new_nav p{
+				display: block;
+			    height: 70px;
+			    line-height: 70px;
+			    border-bottom: 1px solid #E33F7B;
+			}
+			
+			
+			
+			
+						.content-block-title+.card,
+.content-block-title+.content-block,
+.content-block-title+.list-block {
+	margin-top: .5rem
+}
+.theme-dark .card {
+	background: #1c1d1f
+}
+.card .list-block ul,
+.cards-list ul {
+	background: 0 0
+}
+
+.card .list-block>ul:before,
+.cards-list>ul:before {
+	display: none
+}
+
+.card .list-block>ul:after,
+.cards-list>ul:after {
+	display: none
+}
+
+.card {
+	background: #fff;
+	box-shadow: 0 .05rem .1rem rgba(0, 0, 0, .3);
+	margin: .5rem;
+	position: relative;
+	border-radius: .1rem;
+	font-size: .7rem
+}
+
+.card .content-block,
+.card .list-block {
+	margin: 0
+}
+
+.row:not(.no-gutter) .col>.card {
+	margin-left: 0;
+	margin-right: 0
+}
+.list-block {
+	margin: 1.75rem 0;
+	font-size: .85rem
+}
+
+.list-block ul {
+	background: #fff;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: relative
+}
+
+.list-block ul:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: auto;
+	right: auto;
+	height: 1px;
+	width: 100%;
+	background-color: #e7e7e7;
+	display: block;
+	z-index: 15;
+	-webkit-transform-origin: 50% 0;
+	transform-origin: 50% 0
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2) {
+	.list-block ul:before {
+		-webkit-transform: scaleY(.5);
+		transform: scaleY(.5)
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3) {
+	.list-block ul:before {
+		-webkit-transform: scaleY(.33);
+		transform: scaleY(.33)
+	}
+}
+
+.list-block ul:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: auto;
+	top: auto;
+	height: 1px;
+	width: 100%;
+	background-color: #e7e7e7;
+	display: block;
+	z-index: 15;
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2) {
+	.list-block ul:after {
+		-webkit-transform: scaleY(.5);
+		transform: scaleY(.5)
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3) {
+	.list-block ul:after {
+		-webkit-transform: scaleY(.33);
+		transform: scaleY(.33)
+	}
+}
+
+.list-block ul ul {
+	padding-left: 2.25rem
+}
+
+.list-block ul ul:before {
+	display: none
+}
+
+.list-block ul ul:after {
+	display: none
+}
+
+.list-block .align-top,
+.list-block .align-top .item-content,
+.list-block .align-top .item-inner {
+	-webkit-box-align: start;
+	-webkit-align-items: flex-start;
+	align-items: flex-start
+}
+
+.list-block.inset {
+	margin-left: .75rem;
+	margin-right: .75rem;
+	border-radius: .35rem
+}
+
+.list-block.inset .content-block-title {
+	margin-left: 0;
+	margin-right: 0
+}
+
+.list-block.inset ul {
+	border-radius: .35rem
+}
+
+.list-block.inset ul:before {
+	display: none
+}
+
+.list-block.inset ul:after {
+	display: none
+}
+
+.list-block.inset li:first-child>a {
+	border-radius: .35rem .35rem 0 0
+}
+
+.list-block.inset li:last-child>a {
+	border-radius: 0 0 .35rem .35rem
+}
+
+.list-block.inset li:first-child:last-child>a {
+	border-radius: .35rem
+}
+
+@media all and (min-width:768px) {
+	.list-block.tablet-inset {
+		margin-left: .75rem;
+		margin-right: .75rem;
+		border-radius: .35rem
+	}
+	.list-block.tablet-inset .content-block-title {
+		margin-left: 0;
+		margin-right: 0
+	}
+	.list-block.tablet-inset ul {
+		border-radius: .35rem
+	}
+	.list-block.tablet-inset ul:before {
+		display: none
+	}
+	.list-block.tablet-inset ul:after {
+		display: none
+	}
+	.list-block.tablet-inset li:first-child>a {
+		border-radius: .35rem .35rem 0 0
+	}
+	.list-block.tablet-inset li:last-child>a {
+		border-radius: 0 0 .35rem .35rem
+	}
+	.list-block.tablet-inset li:first-child:last-child>a {
+		border-radius: .35rem
+	}
+	.list-block.tablet-inset .content-block-title {
+		margin-left: 0;
+		margin-right: 0
+	}
+	.list-block.tablet-inset ul {
+		border-radius: .35rem
+	}
+	.list-block.tablet-inset ul:before {
+		display: none
+	}
+	.list-block.tablet-inset ul:after {
+		display: none
+	}
+	.list-block.tablet-inset li:first-child>a {
+		border-radius: .35rem .35rem 0 0
+	}
+	.list-block.tablet-inset li:last-child>a {
+		border-radius: 0 0 .35rem .35rem
+	}
+	.list-block.tablet-inset li:first-child:last-child>a {
+		border-radius: .35rem
+	}
+}
+
+.list-block li {
+	box-sizing: border-box;
+	position: relative
+}
+
+.list-block .item-media {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-shrink: 0;
+	-ms-flex: 0 0 auto;
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0;
+	-webkit-box-lines: single;
+	-moz-box-lines: single;
+	-webkit-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	box-sizing: border-box;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	padding-top: .35rem;
+	padding-bottom: .4rem
+}
+
+.list-block .item-media i+i {
+	margin-left: .25rem
+}
+
+.list-block .item-media i+img {
+	margin-left: .25rem
+}
+
+.list-block .item-media+.item-inner {
+	margin-left: .75rem
+}
+
+.list-block .item-inner {
+	padding-right: .75rem;
+	position: relative;
+	width: 100%;
+	padding-top: .4rem;
+	padding-bottom: .35rem;
+	min-height: 2.2rem;
+	overflow: hidden;
+	box-sizing: border-box;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center
+}
+
+.list-block .item-inner:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: auto;
+	top: auto;
+	height: 1px;
+	width: 100%;
+	background-color: #e7e7e7;
+	display: block;
+	z-index: 15;
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2) {
+	.list-block .item-inner:after {
+		-webkit-transform: scaleY(.5);
+		transform: scaleY(.5)
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3) {
+	.list-block .item-inner:after {
+		-webkit-transform: scaleY(.33);
+		transform: scaleY(.33)
+	}
+}
+
+.list-block .item-title {
+	-webkit-flex-shrink: 1;
+	-ms-flex: 0 1 auto;
+	-webkit-flex-shrink: 1;
+	flex-shrink: 1;
+	white-space: nowrap;
+	position: relative;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 100%
+}
+
+.list-block .item-title.label {
+	width: 35%;
+	-webkit-flex-shrink: 0;
+	-ms-flex: 0 0 auto;
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0;
+	margin: 4px 0
+}
+
+.list-block .item-input {
+	width: 100%;
+	margin-top: -.4rem;
+	margin-bottom: -.35rem;
+	-webkit-box-flex: 1;
+	-ms-flex: 1;
+	-webkit-flex-shrink: 1;
+	-ms-flex: 0 1 auto;
+	-webkit-flex-shrink: 1;
+	flex-shrink: 1
+}
+
+.list-block .item-after {
+	white-space: nowrap;
+	color: #5f646e;
+	-webkit-flex-shrink: 0;
+	-ms-flex: 0 0 auto;
+	-webkit-flex-shrink: 0;
+	flex-shrink: 0;
+	margin-left: .25rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	max-height: 1.4rem
+}
+
+.list-block .smart-select .item-after {
+	max-width: 70%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	position: relative
+}
+
+.list-block .item-link {
+	-webkit-transition-duration: .3s;
+	transition-duration: .3s;
+	display: block;
+	color: inherit
+}
+
+.list-block .item-link .item-inner {
+	padding-right: 1.5rem;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NUM0QzFDNzMyREM0MTFFNUJDNTI4OTMzMEE0RjBENzMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NUM0QzFDNzQyREM0MTFFNUJDNTI4OTMzMEE0RjBENzMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1QzRDMUM3MTJEQzQxMUU1QkM1Mjg5MzMwQTRGMEQ3MyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo1QzRDMUM3MjJEQzQxMUU1QkM1Mjg5MzMwQTRGMEQ3MyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pjs2Bb4AAAItSURBVHjazJhbK0RRGIb3DIOU/AG5kUTOgxmHceFGKf6BO+Vf+E8KKYcYg3FuMpNIDhFJXJAcp/GtvKumrzVs+zBrvfU2u689q6d3rb33+lYgl8tZvymZ3JOX7eQp8gT50fJA0Wj4z3tKbY5VR14hV5ObyWLkZ6sICtq4p4V8CjihevIWucoUQJFUmtUayTvkShMAL5DiGqs3IMlK3YBSgwrIZkBWmAAoIRMKyG2/IIMO/hMjbygepCS53ARAoQHyOqu1YbrLTADMAXJbASmSDOkGlOpTQHaQN72CdAuYBeQuq4cBWaIbUEJGC0Am3UIGPVoqMsk9Vu/CwxTQDSj0iSQPWD2C6Q7oBhT6AmRKAZkwAVDoowBkn+LdqQVQ6A2QhwrIuAmAEjKi2KrF/jPdfgIKveI7Pcfq/eSMCYBSD4pakymA0+RxVrsn15oAOEMeY7Vbcif5ys4ApT7CzZJHWO2G3I1fSyfgPHmY1a7x6bvT/ZpZUMBdOoHzI8El8pCiK+wq8CQXNcFlBdw51tyD00G9SnAVHV++zgDn6hzHiwTjCrgTTKvrQya3Ca5jA5CvY3IP+UlnTxJEb8zhjpDck1cL20mCAcBFWD2D2ovOvjiERojDpTGtnsL9N8EQegt+LJrC5vRN59lMORp0DrePNH2BswvYivXVzuoHSO7dz+2QHcAa6+eMOl87WHOffm8m7QCK7foog+tFi2mZACg3npPkRUxrtkitgvUtwAA5A3LWdzPizwAAAABJRU5ErkJggg==);
+	background-size: .7rem;
+	background-repeat: no-repeat;
+	background-position: 97% center;
+	background-position: -webkit-calc(100% - .5rem) center;
+	background-position: calc(100% - .5rem) center
+}
+
+.list-block .item-link.active-state,
+html:not(.watch-active-state) .list-block .item-link:active {
+	-webkit-transition-duration: 0s;
+	transition-duration: 0s;
+	background-color: #d9d9d9
+}
+
+.list-block .item-link.active-state .item-inner:after,
+html:not(.watch-active-state) .list-block .item-link:active .item-inner:after {
+	background-color: transparent
+}
+
+.list-block .item-link.list-button {
+	padding: 0 .75rem;
+	text-align: center;
+	color: #0894ec;
+	display: block;
+	line-height: 2.15rem
+}
+
+.list-block .item-link.list-button:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: auto;
+	top: auto;
+	height: 1px;
+	width: 100%;
+	background-color: #e7e7e7;
+	display: block;
+	z-index: 15;
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2) {
+	.list-block .item-link.list-button:after {
+		-webkit-transform: scaleY(.5);
+		transform: scaleY(.5)
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3) {
+	.list-block .item-link.list-button:after {
+		-webkit-transform: scaleY(.33);
+		transform: scaleY(.33)
+	}
+}
+
+.list-block .item-content {
+	box-sizing: border-box;
+	padding-left: .75rem;
+	min-height: 2.2rem;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center
+}
+
+.list-block .list-block-label {
+	margin: .5rem 0 1.75rem;
+	padding: 0 .75rem;
+	font-size: .7rem;
+	color: #5f646e
+}
+
+.list-block .item-subtitle {
+	font-size: .75rem;
+	position: relative;
+	overflow: hidden;
+	white-space: nowrap;
+	max-width: 100%;
+	text-overflow: ellipsis
+}
+
+.list-block .item-text {
+	font-size: .75rem;
+	color: #5f646e;
+	line-height: 1.05rem;
+	position: relative;
+	overflow: hidden;
+	height: 2.1rem;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	display: -webkit-box
+}
+
+.list-block.media-list .item-title {
+	font-weight: 500
+}
+
+.list-block.media-list .item-inner {
+	display: block;
+	padding-top: .5rem;
+	padding-bottom: .45rem;
+	-webkit-align-self: stretch;
+	align-self: stretch
+}
+
+.list-block.media-list .item-media {
+	padding-top: .45rem;
+	padding-bottom: .5rem
+}
+
+.list-block.media-list .item-media img {
+	display: block
+}
+
+.list-block.media-list .item-title-row {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between
+}
+
+.list-block .list-group ul:after,
+.list-block .list-group ul:before {
+	z-index: 11
+}
+
+.list-block .list-group+.list-group ul:before {
+	display: none
+}
+
+.list-block .item-divider,
+.list-block .list-group-title {
+	background: #F7F7F7;
+	margin-top: -1px;
+	padding: .2rem .75rem;
+	white-space: nowrap;
+	position: relative;
+	max-width: 100%;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: #e7e7e7
+}
+
+.list-block .item-divider:before,
+.list-block .list-group-title:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: auto;
+	right: auto;
+	height: 1px;
+	width: 100%;
+	background-color: #e7e7e7;
+	display: block;
+	z-index: 15;
+	-webkit-transform-origin: 50% 0;
+	transform-origin: 50% 0
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2) {
+	.list-block .item-divider:before,
+	.list-block .list-group-title:before {
+		-webkit-transform: scaleY(.5);
+		transform: scaleY(.5)
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3) {
+	.list-block .item-divider:before,
+	.list-block .list-group-title:before {
+		-webkit-transform: scaleY(.33);
+		transform: scaleY(.33)
+	}
+}
+
+.list-block .list-group-title {
+	position: relative;
+	position: -webkit-sticky;
+	position: -moz-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 20;
+	margin-top: 0
+}
+
+.list-block .list-group-title:before {
+	display: none
+}
+
+.list-block li:last-child .list-button:after {
+	display: none
+}
+
+.list-block li:last-child .item-inner:after,
+.list-block li:last-child li:last-child .item-inner:after {
+	display: none
+}
+
+.list-block li li:last-child .item-inner:after,
+.list-block li:last-child li .item-inner:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: auto;
+	top: auto;
+	height: 1px;
+	width: 100%;
+	background-color: #e7e7e7;
+	display: block;
+	z-index: 15;
+	-webkit-transform-origin: 50% 100%;
+	transform-origin: 50% 100%
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:2) {
+	.list-block li li:last-child .item-inner:after,
+	.list-block li:last-child li .item-inner:after {
+		-webkit-transform: scaleY(.5);
+		transform: scaleY(.5)
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:3) {
+	.list-block li li:last-child .item-inner:after,
+	.list-block li:last-child li .item-inner:after {
+		-webkit-transform: scaleY(.33);
+		transform: scaleY(.33)
+	}
+}
+
+.list-block input[type=text],
+.list-block input[type=password],
+.list-block input[type=email],
+.list-block input[type=tel],
+.list-block input[type=url],
+.list-block input[type=date],
+.list-block input[type=datetime-local],
+.list-block input[type=time],
+.list-block input[type=number],
+.list-block input[type=search],
+.list-block select,
+.list-block textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	box-sizing: border-box;
+	border: none;
+	background: 0 0;
+	border-radius: 0;
+	box-shadow: none;
+	display: block;
+	padding: 0 0 0 .25rem;
+	margin: 0;
+	width: 100%;
+	height: 2.15rem;
+	color: #3d4145;
+	font-size: .85rem;
+	font-family: inherit
+}
+
+.list-block input[type=date],
+.list-block input[type=datetime-local] {
+	line-height: 2.2rem
+}
+
+.list-block select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none
+}
+
+.list-block .label {
+	vertical-align: top
+}
+
+.list-block textarea {
+	height: 5rem;
+	resize: none;
+	line-height: 1.4;
+	padding-top: .4rem;
+	padding-bottom: .35rem
+}
+
+.card .list-block>ul:before,
+.cards-list>ul:before {
+	display: none
+}
+
+.card .list-block>ul:after,
+.cards-list>ul:after {
+	display: none
+}
+
+.card {
+	background: #fff;
+	box-shadow: 0 .05rem .1rem rgba(0, 0, 0, .3);
+	margin: .5rem;
+	position: relative;
+	border-radius: .1rem;
+	font-size: .7rem
+}
+
+.card .content-block,
+.card .list-block {
+	margin: 0
+}
+
+.list-block.theme-dark ul,
+.theme-dark .list-block ul {
+	background: #1c1d1f
+}
+
+.list-block.theme-dark ul:before,
+.theme-dark .list-block ul:before {
+	background-color: #393939
+}
+
+.list-block.theme-dark ul:after,
+.theme-dark .list-block ul:after {
+	background-color: #393939
+}
+
+.list-block.theme-dark.inset ul,
+.theme-dark .list-block.inset ul {
+	background: #1c1d1f
+}
+
+.list-block.theme-dark.notifications>ul,
+.theme-dark .list-block.notifications>ul {
+	background: 0 0
+}
+
+.list-block.theme-dark .item-subtitle,
+.list-block.theme-dark .item-title,
+.theme-dark .list-block .item-subtitle,
+.theme-dark .list-block .item-title {
+	color: #bbb
+}
+.list-block.theme-white ul,
+.theme-white .list-block ul {
+	background: #fff
+}
+
+.list-block.theme-white ul:after,
+.theme-white .list-block ul:after {
+	background-color: #ddd
+}
+
+.list-block.theme-white ul:before,
+.theme-white .list-block ul:before {
+	background-color: #ddd
+}
+
+.list-block.theme-white.inset ul,
+.theme-white .list-block.inset ul {
+	background: #fafafa
+}
+
+.list-block.theme-white.notifications>ul,
+.theme-white .list-block.notifications>ul {
+	background: 0 0
+}
+.item-title {
+	font-weight: 500
+}
+.div_title{
+	margin-top: 50px;
+	background-color: white;
+}
+.span_title{
+	display: inline-block;
+	width: 50%;
+	text-align: center;
+	font-size: 24px;
+	font-weight:bolder;
+	color: black;
+	margin: 10px 0;
+}
+.img150{
+	height: 160px;
+	width: 400px;
+}
+.ul_list li span{
+	float: right;
+	height: 95px;
+	line-height: 95px;
+	margin: 10px;
+	margin-right: 30px;
+	font-size: 28px;
+}
+.ul_list{
+	background-color: white;
+	margin-top: 15px;
+	overflow: hidden;
+	list-style: none;
+	width: 100%;
+}
+.ul_list li{
+	height: 95px;
+	line-height: 95px;
+	font-size: 28px;
+	color: #929292;
+}
+.product_name{
+	height: 80px;
+	background-color: white;
+	overflow: hidden;
+}
+.product_name span{
+	height: 80px;
+	margin: 0 10px;
+	font-size: 24px;
+	line-height: 80px;
+	background-color: white;
+}
+.div_span{
+	display: inline-block;
+	height: 80px;
+	width: 100%;
+	line-height: 80px;
+	text-align: center;
+	font-size: 20px;
+}
+.div2{
+	width: 100%;
+	background-color: white;
+	margin-top: 15px;
+}
+.pic_Produce{
+	float: left;
+	width: 33%;
+	text-align: center;
+	height: 250px;
+}
+.img100{
+	height: 100px;
+	width: 100px;
+}
+.div2 ul{
+	margin-top: 15px;
+	list-style: none;
+	overflow: hidden;
+	background-color: #FFFFFF;
+}
+		</style>
+	</head>
+
+	<body style="background-color: #F5F5F5;">
+
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="#tabbar">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-chat">
+				<span class="mui-icon mui-icon-email"></span>
+				<span class="mui-tab-label">分类</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-contact">
+				<span class="mui-icon  iconfont">&#xe60c;<span class="mui-badge">3</span></span>
+				<span class="mui-tab-label">购物车</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-map">
+				<span class="mui-icon mui-icon-gear"></span>
+				<span class="mui-tab-label">设置</span>
+			</a>
+		</nav>
+		<div class="mui-content">
+			<div id="tabbar" class="mui-control-content mui-active">
+				<div class="title">
+				  <div class="searchbar1">
+					<div class="search-input">
+						<label class="icon icon-search" for="search"></label>
+						<input type="search" id='search' placeholder='搜索商品名称' />
+					</div>
+				</div>
+				</div>
+				<div class="title">
+					<div id="slider" class="mui-slider">
+						<div class="mui-slider-group mui-slider-loop">
+							<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+
+							</div>
+							<!-- 第一张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="img/b2128347-cafd-41d4-b513-021d3d676768.jpg">
+								</a>
+							</div>
+							<!-- 第二张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img src="img/353f1ca3-b44c-4fd4-97cc-2019d96a1ffa.jpg">
+								</a>
+							</div>
+							<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+
+							</div>
+						</div>
+						<div class="mui-slider-indicator">
+							<div class="mui-indicator mui-active"></div>
+							<div class="mui-indicator"></div>
+						</div>
+					</div>
+					<img src="img/9747e559-38a7-ffe8-f59a-6cf199dd9a55.webp" width="100%"/>
+
+					<div class="mui-content">
+						<ul class="mui-table-view mui-grid-view mui-grid-9">
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img width="100%" src="img/product/105a8935-2999-f231-91e4-8a6e41fe075d.webp" /></a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img width="100%" src="img/product/13aa19ea-3971-a059-965b-bb85cfe646b2.webp" /></a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img width="100%" src="img/product/4ffbf9ae-5e4e-c4eb-f5cc-3332bccd984c.webp" /></a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img width="100%" src="img/product/7e818ac4-88fe-d9dd-178f-3d826f690dd0.webp" /></a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img width="100%" src="img/product/8ed73c8a-799a-e3f9-94aa-7bbbaab2c106.webp" /></a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img width="100%" src="img/product/9f74cb9a-9857-610f-bbf8-97065a710385.webp" /></a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img width="100%" src="img/product/e8a3d591-334d-4611-a87d-ee51e3211352.webp" /></a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img width="100%" src="img/product/f43562e9-4e9f-4356-6f31-bb2fa3e4fffc.webp" /></a>
+							</li>
+							<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+								<a href="#">
+									<img width="100%" src="img/product/1b313384-858d-7440-8105-6474ca562bd3.webp" /></a>
+							</li>
+						</ul>
+
+						   <div class="card">
+				 	<div class="list-block media-list">
+				 	<ul>
+				 		<li class="item-content">
+				 			<div class="item-media">
+				              <img src="img/12.webp" >
+				            </div>
+				            <div class="item-inner">
+				              <div class="item-title-row">
+				                <div class="item-title"><P>红米手机3S</P></div>
+				              </div>
+				              <div class="item-subtitle">指纹识别 / 全网通双卡双待 / 金属机身 / 4100mAh大电池</div>
+				              <div class="item-subtitle">699元 起</div>
+				            </div>
+				 		</li>
+				 		<li class="item-content">
+				 			<div class="item-media">
+				              <img src="img/13.webp" >
+				            </div>
+				            <div class="item-inner">
+				              <div class="item-title-row">
+				                <div class="item-title"><P>红米Note 4</P></div>
+				              </div>
+				              <div class="item-subtitle">Helio X20 十核旗舰处理器 / 全金属一体化机身 / 4100mAh 大电量</div>
+				              <div class="item-subtitle">1199元 起</div>
+				            </div>
+				 		</li>
+				 		<li class="item-content">
+				 			<div class="item-media">
+				              <img src="img/14.webp" >
+				            </div>
+				            <div class="item-inner">
+				              <div class="item-title-row">
+				                <div class="item-title"><P>小米手机5</P></div>
+				              </div>
+				              <div class="item-subtitle">骁龙820处理器 / 4轴防抖相机 / 新增支持双开微信，能刷公交卡、银行卡</div>
+				              <div class="item-subtitle">1599元 起</div>
+				            </div>
+				 		</li>
+				 		<li class="item-content">
+				 			<div class="item-media">
+				              <img src="img/15.webp" >
+				            </div>
+				            <div class="item-inner">
+				              <div class="item-title-row">
+				                <div class="item-title"><P>小米MIX</P></div>
+				              </div>
+				              <div class="item-subtitle">6.4" 全面屏 / 全陶瓷机身 / 骁龙 821 性能版 / 4400mAh 大电量 / 陶瓷声学系统 / 超声波距离感应</div>
+				              <div class="item-subtitle">3499元 起</div>
+				            </div>
+				 		</li>
+				 	</ul>
+				 	</div>
+				
+				 </div>
+
+					</div>
+                <div class="div_title">
+                   <span class="span_title"><img class="img150" src="img/95fa90d7-bdb3-3bff-f505-ed839c516ce5.webp"/></span><span class="span_title"><img class="img150" src="img/55903d32-dc79-3475-c21a-09c86d44aaa5.webp"/></span>
+                </div>
+				</div>
+			</div>
+			<div id="tabbar-with-chat" class="mui-control-content">
+				<div class="title" style="text-align: center;font-size: 28px; height: 100px; line-height: 100px;">商品分类</div>
+                <div class="product_name">
+                	<span>电视盒子</span><span>智能硬件▪路由器</span><span>移动电源▪插线板▪电池</span>
+                </div>
+                <div class="">
+                	<img width="100%" src="img/bg1.webp"/>
+                </div>
+                <div class="div2">
+                	<span class="div_span">手机 电话卡</span>
+                	<ul>
+                		<li class="pic_Produce">
+                			
+                				<img class="img100" src="img/imgc/1.jpg"/><br><span>小米Note 2</span>
+                		
+                		</li>
+                		<li class="pic_Produce">
+                			
+                				<img class="img100" src="img/imgc/13.jpg"/><br><span>小米MIX</span>
+                		
+                		</li>
+                		<li class="pic_Produce">
+                			
+                				<img class="img100" src="img/imgc/3.jpg"/><br><span>小米5S</span>
+                			
+                		</li>
+                		<li class="pic_Produce">
+                		
+                				<img class="img100" src="img/imgc/4.jpg"/><br><span>小米5S Plus</span>
+                		
+                		</li>
+                		<li class="pic_Produce">
+                		
+                				<img class="img100" src="img/imgc/5.png"/><br><span>小米5</span>
+                			
+                		</li>
+                		<li class="pic_Produce">
+                		
+                				<img class="img100" src="img/imgc/6.jpg"/><br><span>小米Max</span>
+                		
+                		</li>
+                		<li class="pic_Produce">
+                		
+                				<img class="img100" src="img/imgc/8.jpg"/><br><span>小米4</span>
+                			
+                		</li>
+                	</ul>
+                </div>
+                 <div class="div2">
+                	
+                	<img width="100%" src="img/df6ad771-c4db-49fc-930f-0f505121d97b.webp"/>
+                	<span class="div_span">笔记本 平板</span>
+                	<ul>
+                		<li class="pic_Produce">
+                			
+                				<img class="img100" src="img/imgc/2.png"/><br><span>笔记本12.5“</span>
+                		
+                		</li>
+                		<li class="pic_Produce">
+                			
+                				<img class="img100" src="img/8f988cdf-e9e1-b0e9-39bf-976cea499c00.webp"/><br><span>笔记本13.3“</span>
+                		
+                		</li>
+                		<li class="pic_Produce">
+                			
+                				<img class="img100" src="img/9d4878d9-64d3-8718-320d-91c380dccd70.webp"/><br><span>笔记本配件</span>
+                			
+                		</li>
+                		<li class="pic_Produce">
+                		
+                				<img class="img100" src="img/T1OoxjByYv1RC2b46K.webp"/><br><span>平板2</span>
+                		
+                		</li>
+                		
+                </div>
+			</div>
+			<div id="tabbar-with-contact" class="mui-control-content">
+				<div class="title">这是div模式选项卡中的第3个子页面，该页面展示一个通讯录示例.</div>
+				<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-cell">
+							<div class="oa-contact-cell mui-table">
+								<div class="oa-contact-avatar mui-table-cell">
+									<img src="img/1 (22).jpg" />
+								</div>
+								<div class="oa-contact-content mui-table-cell">
+									<div class="mui-clearfix">
+										<h4 class="oa-contact-name">小米Note</h4>
+										<span class="oa-contact-position mui-h6" style="color:#ff6709 ;">2799元</span>
+									</div>
+									<p class="oa-contact-email mui-h6">
+										轻薄全金属，海量内容
+									</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-cell">
+							<div class="oa-contact-cell mui-table">
+								<div class="oa-contact-avatar mui-table-cell">
+									<img src="img/1 (14).jpg" />
+								</div>
+								<div class="oa-contact-content mui-table-cell">
+									<div class="mui-clearfix">
+										<h4 class="oa-contact-name">小米MIX</h4>
+										<span class="oa-contact-position mui-h6" style="color:#ff6709 ;">3499元</span>
+									</div>
+									<p class="oa-contact-email mui-h6">
+										6.44英寸大屏、4850mAh 大电量
+									</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-cell">
+							<div class="oa-contact-cell mui-table">
+								<div class="oa-contact-avatar mui-table-cell">
+									<img src="img/1 (12).jpg" />
+								</div>
+								<div class="oa-contact-content mui-table-cell">
+									<div class="mui-clearfix">
+										<h4 class="oa-contact-name">小米5s Plus</h4>
+										<span class="oa-contact-position mui-h6" style="color:#ff6709 ;">2299元</span>
+									</div>
+									<p class="oa-contact-email mui-h6">
+										5.7英寸大屏双摄手机，拍照黑科技
+									</p>
+								</div>
+							</div>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+			<div id="tabbar-with-map" class="mui-control-content">
+				<div class="title">这是div模式选项卡中的第4个子页面，该页面展示一个常见的设置示例.</div>
+				<header id="header" class="mui-bar mui-bar-nav">
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+					<h1 class="mui-title">个人中心</h1>
+				</header>
+				<div id="divlogin">
+					<div class="div_long">
+						<h2>立即登录</h2>
+					</div>
+					<div id="divYuan">
+
+					</div>
+				</div>
+				<div class="new_nav">
+						<ul>
+							<li>
+								<a href="#"><div class="div_font"></div>
+									<p>全部订单</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"><div class="div_font"></div>
+									<p>待付款</p>
+								</a>
+							</li>
+							<li>
+								<a href="#"><div class="div_font"></div>
+									<p>待收货</p>
+								</a>
+							</li>
+						</ul>				
+				</div>
+				<ul class="ul_list">
+					<li>我的优惠<span>></span></li>
+				</ul>
+				<ul class="ul_list">
+					<li>服务中心<span>></span></li>
+					<li>小米之家<span>></span></li>
+				</ul>
+				<ul class="ul_list">
+					<li>设置<span>></span></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script>
+		mui.init({
+			swipeBack: true //启用右滑关闭功能
+		});
+		var slider = mui("#slider");
+		document.getElementById("switch").addEventListener('toggle', function(e) {
+			if(e.detail.isActive) {
+				slider.slider({
+					interval: 5000
+				});
+			} else {
+				slider.slider({
+					interval: 0
+				});
+			}
+		});
+	</script>
+
+</html>

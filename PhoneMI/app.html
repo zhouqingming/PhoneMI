@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>小米手机客户端</title>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<link rel="stylesheet" type="text/css" href="index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<style>
+			.title {
+				margin: 20px 15px 10px;
+				color: #6d6d72;
+				font-size: 15px;
+			}
+			
+			.oa-contact-cell.mui-table .mui-table-cell {
+				padding: 11px 0;
+				vertical-align: middle;
+			}
+			
+			.oa-contact-cell {
+				position: relative;
+				margin: -11px 0;
+			}
+			
+			.oa-contact-avatar {
+				width: 75px;
+			}
+			
+			.oa-contact-avatar img {
+				border-radius: 50%;
+			}
+			
+			.oa-contact-content {
+				width: 100%;
+			}
+			
+			.oa-contact-name {
+				margin-right: 20px;
+			}
+			
+			.oa-contact-name,
+			oa-contact-position {
+				float: left;
+			}
+			.mui-title{
+				  
+			
+				color: #9C9C9C;
+			}
+			.iconfont{
+				font-size:24px;
+			}
+			.w100{
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<div class="mui-title"><a href="#"><i class="iconfont">&#xe616;</i><span class="text">搜索商品名称</span></a></div>
+		</header>
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" href="#tabbar">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" href="#tabbar-with-chat">
+				<span class="mui-icon mui-icon-email"></span>
+				<span class="mui-tab-label">分类</span>
+			</a>
+				<a class="mui-tab-item" href="#tabbar-with-contact">
+				<span class="mui-icon  iconfont">&#xe60c;<span class="mui-badge">3</span></span>
+				<span class="mui-tab-label">购物车</span>
+
+			</a>
+			
+			<a class="mui-tab-item" href="#tabbar-with-map">
+				<span class="mui-icon mui-icon-contact"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+		<div class="mui-content">
+			<div id="tabbar" class="mui-control-content mui-active">
+				<div class="title"></div>
+				<div class="title">
+					<div id="slider" class="mui-slider">
+						<div class="mui-slider-group mui-slider-loop">
+							<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+							
+							</div>
+							<!-- 第一张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img class="w100" src="img/b2128347-cafd-41d4-b513-021d3d676768.jpg">
+								</a>
+							</div>
+							<!-- 第二张 -->
+							<div class="mui-slider-item">
+								<a href="#">
+									<img class="w100" src="img/353f1ca3-b44c-4fd4-97cc-2019d96a1ffa.jpg">
+								</a>
+							</div>
+							<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+							<div class="mui-slider-item mui-slider-item-duplicate">
+							
+							</div>
+						</div>
+						<img class="w100" src="img/9747e559-38a7-ffe8-f59a-6cf199dd9a55.webp"/>
+							
+						</div>
+						<div class="mui-slider-indicator">
+							<div class="mui-indicator mui-active"></div>
+							<div class="mui-indicator"></div>
+						</div>
+					</div>
+              </div>
+				</div>
+				<div id="tabbar-with-chat" class="mui-control-content">
+					<div class="title">这是div模式选项卡中的第2个子页面，该页面展示一个分类列表</div>
+
+					
+
+				</div>
+				<div id="tabbar-with-contact" class="mui-control-content">
+					<div class="title">这是div模式选项卡中的第3个子页面，该页面展示一个通讯录示例.</div>
+					<ul class="mui-table-view mui-table-view-striped mui-table-view-condensed">
+						<li class="mui-table-view-cell">
+							<div class="mui-slider-cell">
+								<div class="oa-contact-cell mui-table">
+									<div class="oa-contact-avatar mui-table-cell">
+										<img src="img/1 (22).jpg" />
+									</div>
+									<div class="oa-contact-content mui-table-cell">
+										<div class="mui-clearfix">
+											<h4 class="oa-contact-name">小米Note</h4>
+											<span class="oa-contact-position mui-h6" style="color:#ff6709 ;">2799元</span>
+										</div>
+										<p class="oa-contact-email mui-h6">
+											轻薄全金属，海量内容
+										</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<div class="mui-slider-cell">
+								<div class="oa-contact-cell mui-table">
+									<div class="oa-contact-avatar mui-table-cell">
+										<img src="img/1 (14).jpg" />
+									</div>
+									<div class="oa-contact-content mui-table-cell">
+										<div class="mui-clearfix">
+											<h4 class="oa-contact-name">小米MIX</h4>
+											<span class="oa-contact-position mui-h6" style="color:#ff6709 ;">3499元</span>
+										</div>
+										<p class="oa-contact-email mui-h6">
+											6.44英寸大屏、4850mAh 大电量
+										</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell">
+							<div class="mui-slider-cell">
+								<div class="oa-contact-cell mui-table">
+									<div class="oa-contact-avatar mui-table-cell">
+										<img src="img/1 (12).jpg" />
+									</div>
+									<div class="oa-contact-content mui-table-cell">
+										<div class="mui-clearfix">
+											<h4 class="oa-contact-name">小米5s Plus</h4>
+											<span class="oa-contact-position mui-h6" style="color:#ff6709 ;">2299元</span>
+										</div>
+										<p class="oa-contact-email mui-h6">
+										5.7英寸大屏双摄手机，拍照黑科技
+										</p>
+									</div>
+								</div>
+							</div>
+						</li>
+						
+						
+					</ul>
+				</div>
+				<div id="tabbar-with-map" class="mui-control-content">
+					<div class="title">这是div模式选项卡中的第4个子页面，该页面展示一个常见的设置示例.</div>
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								新消息通知
+							</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								隐私
+							</a>
+						</li>
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								通用
+							</a>
+						</li>
+					</ul>
+					<ul class="mui-table-view" style="margin-top: 25px;">
+						<li class="mui-table-view-cell">
+							<a class="mui-navigate-right">
+								关于mui
+							</a>
+						</li>
+					</ul>
+					<ul class="mui-table-view" style="margin-top: 25px;">
+						<li class="mui-table-view-cell">
+							<a style="text-align: center;color: #FF3B30;">
+								退出登录
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script>
+		mui.init({
+			swipeBack: true //启用右滑关闭功能
+		});
+		var slider = mui("#slider");
+			document.getElementById("switch").addEventListener('toggle', function(e) {
+				if (e.detail.isActive) {
+					slider.slider({
+						interval: 5000
+					});
+				} else {
+					slider.slider({
+						interval: 0
+					});
+				}
+			});
+
+	</script>
+
+</html>
